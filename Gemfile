@@ -4,6 +4,11 @@ gem 'rails', '3.2.13'
 gem 'pg', '0.16.0'
 gem 'devise'
 gem 'cancan'
+
+gem 'execjs'
+gem 'therubyracer','0.10.2', :platform => :ruby
+
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
