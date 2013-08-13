@@ -1,9 +1,9 @@
-tr
-  td = report.name
-  td = report.description
-  td = report.height
-  td = report.width
-  td = report.length
-  td = link_to 'Show', report
-  td = link_to 'Edit', edit_report_path(report)
-  td = link_to 'Destroy', report, :confirm => 'Are you sure?', :method => :delete
+.row-fluid
+  .span2 = report.name
+  .span4 = report.description
+  .span1 = report.height
+  .span1 = report.width
+  .span1 = report.length
+  .span1 = link_to 'Show', report
+  .span1 = link_to 'Edit', edit_report_path(report)
+  .span1 = link_to 'Destroy', report, confirm: 'Are you sure?', method: :delete
