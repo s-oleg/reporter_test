@@ -2,4 +2,11 @@ Steps for run application:
 
 1. bundle install
 2. edit /confid/database.yml
-3. 
+3. rake db:create:all
+4. rake db:migrate
+5. rake db:seed
+6. go to <host>/users/sign_up, enter credentials 
+7. use email proviced during sign_up and run from cli 
+    rake admin:create email=email@example.com
+8. rake db:populate
+9. 
