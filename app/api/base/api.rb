@@ -4,11 +4,11 @@ module Base
     version 'api', using: :header, vendor: 'base'
     format :json
 
-    helpers do
-
-    end
-
     resource :reports do
+      get do
+        Report.all.to_json
+      end
+
       get ':id' do
         Report.find(params[:id])
       end
@@ -27,10 +27,6 @@ module Base
 
       delete ':id' do
         Report.destroy(params[:id])
-      end
-
-      get do
-        Report.all.to_json
       end
     end
   end
