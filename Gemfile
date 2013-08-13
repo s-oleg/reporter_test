@@ -9,6 +9,7 @@ gem 'execjs'
 gem 'therubyracer','0.10.2', :platform => :ruby
 gem 'pry'
 
+gem 'populator'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
