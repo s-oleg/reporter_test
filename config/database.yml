@@ -3,18 +3,18 @@ development:
   database: reporter_dev
   host: localhost
   username: postgres
-  password: root
+  password: password
 
 test:
   adapter: postgresql
   database: reporter_test
   host: localhost
   username: postgres
-  password: root
+  password: password
 
 production:
   adapter: postgresql
   database: reporter_prodaction
   host: localhost
   username: postgres
-  password: root
+  password: password
