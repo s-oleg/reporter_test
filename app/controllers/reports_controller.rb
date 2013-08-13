@@ -3,6 +3,7 @@ class ReportsController < ApplicationController
 
   def index
     @reports = current_user.reports
+    Filter.new(params[:filter_by], @reports) if params[:filter_by]
 
     respond_to do |format|
       format.html
