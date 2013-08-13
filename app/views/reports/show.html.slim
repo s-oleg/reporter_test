@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @report.name
+p
+  strong Description:
+  = @report.description
+p
+  strong Height:
+  = @report.height
+p
+  strong Width:
+  = @report.width
+p
+  strong Length:
+  = @report.length
+
+= link_to 'Edit', edit_report_path(@report)
+'|
+= link_to 'Back', reports_path
