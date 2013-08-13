@@ -12,6 +12,7 @@ namespace :db do
       row.height = [4.99, 19.95, 100]
       row.width = [1.29, 9.45, 150]
       row.length = [3.34, 2.66, 6.12]
+      row.user_id = User.first(order: "RANDOM()")
     end
 
   end
