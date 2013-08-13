@@ -1,44 +1,31 @@
 class ReportsController < ApplicationController
-  # GET /reports
-  # GET /reports.json
+  before_filter :find_report, except: [:new, :create]
+
   def index
-    @reports = Report.all
+    @reports = current_user.reports
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @reports }
     end
   end
 
-  # GET /reports/1
-  # GET /reports/1.json
   def show
-    @report = Report.find(params[:id])
-
     respond_to do |format|
-      format.html # show.html.erb
+      format.html
       format.json { render json: @report }
     end
   end
 
-  # GET /reports/new
-  # GET /reports/new.json
   def new
     @report = Report.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html
       format.json { render json: @report }
     end
   end
 
-  # GET /reports/1/edit
-  def edit
-    @report = Report.find(params[:id])
-  end
-
-  # POST /reports
-  # POST /reports.json
   def create
     @report = Report.new(params[:report])
 
@@ -53,10 +40,7 @@ class ReportsController < ApplicationController
     end
   end
 
-  # PUT /reports/1
-  # PUT /reports/1.json
   def update
-    @report = Report.find(params[:id])
 
     respond_to do |format|
       if @report.update_attributes(params[:report])
@@ -69,15 +53,18 @@ class ReportsController < ApplicationController
     end
   end
 
-  # DELETE /reports/1
-  # DELETE /reports/1.json
   def destroy
-    @report = Report.find(params[:id])
     @report.destroy
 
     respond_to do |format|
       format.html { redirect_to reports_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def find_report
+    @report = Report.find_by_id(params[:id])
   end
 end
