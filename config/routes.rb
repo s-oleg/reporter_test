@@ -1,9 +1,9 @@
 Reporter::Application.routes.draw do
-  mount Base::Api => '/'
-
   devise_for :users
 
   match '/auth/:provider/callback' => 'authentications#create'
+
+  mount Base::Api => '/'
 
   namespace :admin do
   end

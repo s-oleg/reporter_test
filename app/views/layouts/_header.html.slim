@@ -2,8 +2,10 @@
   .navbar-inner
     .row-fluid
       .span12
+        .pull-left
+          h3 AWESOME LOGO
         - if user_signed_in?
-          .span6.pull-right
+          .pull-right
             = link_to 'REPORTS', reports_path
             | &emsp;
             = link_to 'SIGN OUT', destroy_user_session_path, method: :delete

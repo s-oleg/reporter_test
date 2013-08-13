@@ -10,6 +10,7 @@ body
     .container-fluid
       .inline-block
         = render partial: 'layouts/header'
-  .container.content-container
-    .span8
-      = yield
+  .container-fluid.content-container
+    = render partial: 'shared/flash_messages'
+    = yield
+    div#modal_window.modal.hide.fade
