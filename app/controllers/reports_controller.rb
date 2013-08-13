@@ -3,6 +3,7 @@ class ReportsController < ApplicationController
   # GET /reports.json
   def index
     @reports = Report.all
+    Filter.new(params[:filter_by], @reports) if params[:filter_by]
 
     respond_to do |format|
       format.html # index.html.erb
