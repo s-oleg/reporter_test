@@ -1,21 +1,31 @@
-p#notice = notice
+#notice= notice
+.block
+  .row-fluid
+    .span3
+      strong Name:
+    .span6
+      = @report.name
+  .row-fluid
+    .span3
+      strong Description:
+    .span6
+      = @report.description
+  .row-fluid
+    .span3
+      strong Height:
+    .span6
+      = @report.height
+  .row-fluid
+    .span3
+      strong Width:
+    .span6
+      = @report.width
+  .row-fluid
+    .span3
+      strong Length:
+    .span6
+      = @report.length
 
-p
-  strong Name:
-  = @report.name
-p
-  strong Description:
-  = @report.description
-p
-  strong Height:
-  = @report.height
-p
-  strong Width:
-  = @report.width
-p
-  strong Length:
-  = @report.length
-
-= link_to 'Edit', edit_report_path(@report)
-'|
-= link_to 'Back', reports_path
+  = link_to 'Edit', edit_report_path(@report), class: 'btn'
+  | &emsp;
+  = link_to 'Back', reports_path, class: 'btn'

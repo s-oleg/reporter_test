@@ -7,24 +7,14 @@
           li = message
 
   .row-fluid
-    .span4
-      = f.label :name
-    .span4
-      = f.text_field :name
-    .span4
-      = f.label :description
-    .span4
-      = f.text_field :description
-    .span4
-      = f.label :height
-    .span4
-      = f.text_field :height
-    .span4
-      = f.label :width
-    .span4
-      = f.text_field :width
-    .span4
-      = f.label :length
-    .span4
-      = f.text_field :length
+    = f.label :name
+    = f.text_field :name
+    = f.label :description
+    = f.text_field :description
+    = f.label :height
+    = f.text_field :height
+    = f.label :width
+    = f.text_field :width
+    = f.label :length
+    = f.text_field :length
   .actions = f.submit 'Save'
