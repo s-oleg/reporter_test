@@ -13,6 +13,7 @@ gem 'less-rails'
 gem 'twitter-bootstrap-rails', '2.2.6'
 
 gem 'populator'
+gem 'grape'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
