@@ -29,6 +29,7 @@ GEM
       i18n (= 0.6.1)
       multi_json (~> 1.0)
     arel (3.0.2)
+    backports (3.3.3)
     bcrypt-ruby (3.1.1)
     builder (3.0.4)
     cancan (1.6.10)
@@ -42,6 +43,7 @@ GEM
     coffee-script-source (1.6.3)
     commonjs (0.2.6)
     database_cleaner (1.1.1)
+    descendants_tracker (0.0.1)
     devise (3.0.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -58,6 +60,17 @@ GEM
       railties (>= 3.0.0)
     faker (1.2.0)
       i18n (~> 0.5)
+    grape (0.5.0)
+      activesupport
+      builder
+      hashie (>= 1.2.0)
+      multi_json (>= 1.3.2)
+      multi_xml (>= 0.5.2)
+      rack (>= 1.3.0)
+      rack-accept
+      rack-mount
+      virtus
+    hashie (2.0.5)
     hike (1.2.3)
     i18n (0.6.1)
     journey (1.0.4)
@@ -77,6 +90,7 @@ GEM
     method_source (0.8.2)
     mime-types (1.23)
     multi_json (1.7.9)
+    multi_xml (0.5.5)
     orm_adapter (0.4.0)
     pg (0.16.0)
     polyglot (0.3.3)
@@ -86,8 +100,12 @@ GEM
       method_source (~> 0.8)
       slop (~> 3.4)
     rack (1.4.5)
+    rack-accept (0.4.5)
+      rack (>= 0.4)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-mount (0.8.3)
+      rack (>= 1.0.0)
     rack-ssl (1.3.3)
       rack
     rack-test (0.6.2)
@@ -166,6 +184,9 @@ GEM
     uglifier (2.1.2)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    virtus (0.5.5)
+      backports (~> 3.3)
+      descendants_tracker (~> 0.0.1)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -181,6 +202,7 @@ DEPENDENCIES
   factory_girl
   factory_girl_rails
   faker
+  grape
   jquery-rails
   less
   less-rails
