@@ -1,6 +1,5 @@
 .block
   h1 Listing reports
-
 table
   tr
     th Name
@@ -12,7 +11,7 @@ table
     th
     th
 
-  = render 'report', collection: @reports
+  = render partial: 'report', collection: @reports
     tr
 
 

@@ -29,7 +29,7 @@ class ReportsController < ApplicationController
   end
 
   def create
-    @report = Report.new(params[:report])
+    @report = Report.new(params[:report].merge(user_id: current_user.id))
 
     respond_to do |format|
       if @report.save

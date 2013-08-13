@@ -6,19 +6,25 @@
         - @report.errors.full_messages.each do |message|
           li = message
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .field
-    = f.label :description
-    = f.text_field :description
-  .field
-    = f.label :height
-    = f.text_field :height
-  .field
-    = f.label :width
-    = f.text_field :width
-  .field
-    = f.label :length
-    = f.text_field :length
+  .row-fluid
+    .span4
+      = f.label :name
+    .span4
+      = f.text_field :name
+    .span4
+      = f.label :description
+    .span4
+      = f.text_field :description
+    .span4
+      = f.label :height
+    .span4
+      = f.text_field :height
+    .span4
+      = f.label :width
+    .span4
+      = f.text_field :width
+    .span4
+      = f.label :length
+    .span4
+      = f.text_field :length
   .actions = f.submit 'Save'
