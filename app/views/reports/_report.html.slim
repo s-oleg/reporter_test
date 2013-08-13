@@ -1,9 +1,9 @@
-.row-fluid
+.row-fluid id="report_#{report.id}"
   .span2 = report.name
   .span4 = report.description
   .span1 = report.height
   .span1 = report.width
   .span1 = report.length
   .span1 = link_to 'Show', report
-  .span1 = link_to 'Edit', edit_report_path(report)
-  .span1 = link_to 'Destroy', report, confirm: 'Are you sure?', method: :delete
+  .span1 = link_to 'Edit', edit_report_path(report), remote: true
+  .span1 = link_to 'Destroy', report, confirm: 'Are you sure?', method: :delete, remote: true

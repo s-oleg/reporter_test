@@ -46,7 +46,7 @@ class ReportsController < ApplicationController
 
     respond_to do |format|
       if @report.update_attributes(params[:report])
-        format.html { redirect_to @report, notice: 'Report was successfully updated.' }
+        format.html { redirect_to reports_path, notice: 'Report was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -61,6 +61,7 @@ class ReportsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to reports_url }
       format.json { head :no_content }
+      format.js
     end
   end
 
