@@ -1,19 +1,19 @@
 .block
   h1 Listing reports
 table
-  tr
-    th Name
-    th Description
-    th Height
-    th Width
-    th Length
-    th
-    th
-    th
-
-  = render partial: 'report', collection: @reports
+  thead
     tr
-
+      th Name
+      th Description
+      th Height
+      th Width
+      th Length
+      th
+      th
+      th
+  tbody
+    = render partial: 'report', collection: @reports
+      br
 
 br
 
