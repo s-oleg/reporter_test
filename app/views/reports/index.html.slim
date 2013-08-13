@@ -8,11 +8,11 @@
         .span3= f.text_field :param
         .span3= f.submit 'Filter', class: 'btn'
     .row-fluid
-      .span2 Name
-      .span4 Description
-      .span1 Height
-      .span1 Width
-      .span1 Length
+      .span2 = link_to 'Name', reports_path(sort: { field: :name, direction: "ASC" } )
+      .span4 = link_to 'Description', reports_path(sort: { field: :description, direction: "ASC" } )
+      .span1 = link_to 'Height', reports_path(sort: { field: :height, direction: "ASC" } )
+      .span1 = link_to 'Width', reports_path(sort: { field: :width, direction: "ASC" } )
+      .span1 = link_to 'Length', reports_path(sort: { field: :length, direction: "ASC" } )
       .span1
       .span1
       .span1

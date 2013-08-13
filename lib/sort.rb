@@ -7,7 +7,7 @@ class Sort
   end
 
   def execute
-    @data = @data.order(@field.to_s + ' ' + @direction.to_s)
+    @data = @data.order("#{@field} #{@direction}")
     @data
   end
 
