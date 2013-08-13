@@ -5,20 +5,32 @@ module Base
     format :json
 
     helpers do
-      def current_user
-        env['warden'].user
-      end
 
-      def authenticate!
-        unless current_user
-          error!('401 Unauthorized', 401)
-        end
-      end
     end
 
     resource :reports do
+      get ':id' do
+        Report.find(params[:id])
+      end
+
+      post do
+        report = Report.new
+        report.assign_attributes(params[:data])
+        report.save
+      end
+
+      put ':id' do
+        report = Report.find(params[:id])
+        report.assign_attributes(params[:data])
+        report.save
+      end
+
+      delete ':id' do
+        Report.destroy(params[:id])
+      end
+
       get do
-        current_user.reports
+        Report.all.to_json
       end
     end
   end
