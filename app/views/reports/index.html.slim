@@ -1,20 +1,16 @@
 .block
   h1 Listing reports
-table
-  thead
-    tr
-      th Name
-      th Description
-      th Height
-      th Width
-      th Length
-      th
-      th
-      th
-  tbody
-    = render partial: 'report', collection: @reports
-      br
-
-br
-
-= link_to 'New Report', new_report_path
+  table.table.table-striped
+    thead
+      tr
+        th Name
+        th Description
+        th Height
+        th Width
+        th Length
+        th
+        th
+        th
+    tbody
+      = render partial: 'report', collection: @reports
+  = link_to 'New Report', new_report_path, class: 'btn btn-success'

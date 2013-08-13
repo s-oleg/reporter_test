@@ -1,0 +1,15 @@
+doctype
+html
+  head
+    title Reporter
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+body
+  header
+    .container-fluid
+      .inline-block
+        = render partial: 'layouts/header'
+  .container.content-container
+    .span8
+      = yield

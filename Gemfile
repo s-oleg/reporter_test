@@ -6,8 +6,11 @@ gem 'devise'
 gem 'cancan'
 
 gem 'execjs'
-gem 'therubyracer','0.10.2', :platform => :ruby
+gem 'therubyracer'
 gem 'pry'
+gem 'less'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails', '2.2.6'
 
 gem 'populator'
 
