@@ -5,6 +5,7 @@ class ReportsController < ApplicationController
   def index
     @reports = current_user.reports
     @reports = Filter.new(@reports, params[:filter]).execute if params[:filter]
+    @reports = Sort.new(@reports, params[:sort][:field], params[:sort][:direction]).execute if params[:sort]
 
     respond_to do |format|
       format.html
