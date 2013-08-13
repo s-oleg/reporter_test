@@ -61,4 +61,11 @@ describe ReportsController do
     end
   end
 
+  describe '#delete' do
+    it 'should delete report' do
+      delete :destroy, id: report
+      response.should redirect_to reports_path
+    end
+
+  end
 end
