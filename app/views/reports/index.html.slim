@@ -2,13 +2,19 @@
   h1 Listing reports
 
   #reports.row-fluid
-    .span2 Name
-    .span4 Description
-    .span1 Height
-    .span1 Width
-    .span1 Length
-    .span1
-    .span1
-    .span1
+    .row-fluid
+      = form_for :filter, url: reports_path, method: 'GET' do |f|
+        .span3= f.select :by, options_for_select(Constants::Report::FILTER)
+        .span3= f.text_field :param
+        .span3= f.submit 'Filter', class: 'btn'
+    .row-fluid
+      .span2 Name
+      .span4 Description
+      .span1 Height
+      .span1 Width
+      .span1 Length
+      .span1
+      .span1
+      .span1
     = render partial: 'report', collection: @reports
   .row-fluid= link_to 'New Report', new_report_path

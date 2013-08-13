@@ -4,7 +4,7 @@ class ReportsController < ApplicationController
 
   def index
     @reports = current_user.reports
-    Filter.new(params[:filter_by], @reports) if params[:filter_by]
+    @reports = Filter.new(@reports, params[:filter]).execute if params[:filter]
 
     respond_to do |format|
       format.html

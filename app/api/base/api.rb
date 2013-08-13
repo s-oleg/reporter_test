@@ -18,7 +18,6 @@ module Base
 
     resource :reports do
       get do
-        binding.pry
         current_user.reports
       end
     end
