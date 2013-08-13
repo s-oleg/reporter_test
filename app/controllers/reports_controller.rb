@@ -1,4 +1,5 @@
 class ReportsController < ApplicationController
+  before_filter :authenticate_user!
   before_filter :find_report, except: [:new, :create]
 
   def index
