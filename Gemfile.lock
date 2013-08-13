@@ -32,6 +32,7 @@ GEM
     bcrypt-ruby (3.1.1)
     builder (3.0.4)
     cancan (1.6.10)
+    coderay (1.0.9)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -67,11 +68,16 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8.2)
     mime-types (1.23)
     multi_json (1.7.9)
     orm_adapter (0.4.0)
     pg (0.16.0)
     polyglot (0.3.3)
+    pry (0.9.12.2)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -131,6 +137,7 @@ GEM
       activesupport (>= 3.0, < 4.1)
       railties (>= 3.0, < 4.1)
       slim (~> 2.0)
+    slop (3.4.6)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -165,6 +172,7 @@ DEPENDENCIES
   faker
   jquery-rails
   pg (= 0.16.0)
+  pry
   rails (= 3.2.13)
   rspec
   rspec-rails
