@@ -9,4 +9,5 @@ FactoryGirl.define do
     length 1.5
     association :user
   end
+
 end
