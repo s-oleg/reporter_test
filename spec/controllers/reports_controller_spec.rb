@@ -43,7 +43,7 @@ describe ReportsController do
 
       it 'should render to new' do
         post :create, report: invalid_attributes
-        response.should render_template('new')
+        response.should render_template 'new'
       end
     end
 
@@ -56,7 +56,7 @@ describe ReportsController do
 
       it 'should render to report_path' do
         post :create, report: valid_attributes
-        response.should redirect_to(Report.last)
+        response.should redirect_to Report.last
       end
     end
   end
@@ -66,6 +66,5 @@ describe ReportsController do
       delete :destroy, id: report
       response.should redirect_to reports_path
     end
-
   end
 end
